@@ -7,12 +7,13 @@ class HelloWorldList extends Component {
 constructor (props) {
   super (props);
   this.state = {greetings: ["Jim", "Sally", "Bender"]};
+  this.addGreeting = this.addGreeting.bind(this);
 }
 
   render() {
     return (
       <div className = "HelloWorldList">
-        <AddGreeter />
+        <AddGreeter addGreeting = {this.addGreeting}/>
         {this.renderGreetings()}
       </div>
 
@@ -23,6 +24,10 @@ constructor (props) {
     return this.state.greetings.map(name => (
       <HelloWorld key={name} name={name} />
     ));
+  }
+
+  addGreeting(newName) {
+    this.setState({ greetings: [...this.state.greetings, newName] });
   }
 }
 
