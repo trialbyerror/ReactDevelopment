@@ -23,7 +23,7 @@ class HelloWorld extends Component {
   </div>);
   }
 
-  frenchify() {
+  frenchify () {
     this.setState({greeting: 'Bonjour!'});
   }
 
