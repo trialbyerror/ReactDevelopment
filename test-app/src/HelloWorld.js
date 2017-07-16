@@ -27,8 +27,8 @@ class HelloWorld extends Component {
     this.setState({greeting: 'Bonjour!'});
   }
 
-  increaseNum(){
-    this.setState({number: 6})
+  increaseNum (){
+    this.setState({number: 6});
   }
 
 }
